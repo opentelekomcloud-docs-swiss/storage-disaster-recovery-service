@@ -1,3 +1,8 @@
-=================================================================
-Welcome to the documentation of storage-disaster-recovery-service
-=================================================================
+Storage Disaster Recovery Service
+=================================
+
+.. directive_wrapper::
+   :class: container-sbv
+
+   .. service_card::
+      :service_type: sdrs
