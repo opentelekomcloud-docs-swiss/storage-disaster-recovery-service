@@ -3,7 +3,11 @@
     merge-mode: squash-merge
     default-branch: main
     templates:
-      - helpcenter-swiss-base-jobs
+      - helpcenter-base-jobs
+    vars:
+      sphinx_pdf_files:
+        - sdrs-api-ref.pdf
+        - sdrs-umn.pdf
     check:
       jobs:
         - noop
