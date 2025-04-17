@@ -49,7 +49,3 @@ Procedure
 #. Click **OK**.
 
    To ensure proper server running, do not perform any operations to the servers during specification modifications.
-
---------------
-
-Copyright © Huawei Technologies Co., Ltd.

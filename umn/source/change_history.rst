@@ -12,7 +12,3 @@ Released On Description
 2023-10-20  Optimized some descriptions.
 2021-10-11  This issue is the first official release.
 =========== =========================================
-
---------------
-
-Copyright © Huawei Technologies Co., Ltd.

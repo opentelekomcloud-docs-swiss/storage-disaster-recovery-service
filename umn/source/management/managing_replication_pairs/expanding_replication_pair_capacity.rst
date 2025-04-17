@@ -51,7 +51,3 @@ Procedure
 #. Confirm the information and click **Submit**.
 
    If you want to modify the configuration, click **Previous**.
-
---------------
-
-Copyright © Huawei Technologies Co., Ltd.
