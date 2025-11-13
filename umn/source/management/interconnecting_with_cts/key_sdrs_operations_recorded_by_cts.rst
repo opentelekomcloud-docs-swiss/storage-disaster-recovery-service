@@ -24,7 +24,7 @@ Key SDRS Operations Recorded by CTS
    +--------------------------------------------------------------------------------------------------------+-----------------------+--------------------------+
    | Performing a failover for a protection group                                                           | protectionGroup       | failoverProtectionGroup  |
    +--------------------------------------------------------------------------------------------------------+-----------------------+--------------------------+
-   | Performing a planned failover                                                                          | protectionGroup       | reverseProtectionGroup   |
+   | Reprotecting a protection group                                                                        | protectionGroup       | reverseProtectionGroup   |
    +--------------------------------------------------------------------------------------------------------+-----------------------+--------------------------+
    | Action performed when a job of the protection group failed to submit                                   | protectionGroup       | protectionGroupAction    |
    +--------------------------------------------------------------------------------------------------------+-----------------------+--------------------------+

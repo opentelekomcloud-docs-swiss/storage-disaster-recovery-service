@@ -46,7 +46,7 @@ Notes
 Prerequisites
 -------------
 
--  The protection group is in the **Available**, **Protecting**, **Failover complete**, **Enabling protection failed**, **Disabling protection failed**, **Planned failover failed**, **Re-enabling protection failed**, or **Failover failed** state.
+-  The protection group is in the **Available**, **Protecting**, **Failover complete**, **Enabling protection failed**, **Disabling protection failed**, **Switchover failed**, **Re-enabling protection failed**, or **Failover failed** state.
 -  Do not perform a DR drill before the first time data synchronization between the production site server and DR site server completes. Otherwise, the drill server may not start properly.
 
 Procedure

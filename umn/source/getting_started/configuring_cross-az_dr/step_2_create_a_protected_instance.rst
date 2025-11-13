@@ -12,7 +12,7 @@ You can create protected instances using the servers that you want to perform DR
 
 Select a protection group for each server to be replicated and create a protected instance using the server. When you create a protected instance, the server and disk will be created at the DR site for the production site server and disk. The server specifications can be configured as required. Specifically, the specifications of the DR site server can be different from those of the production site server. The disks of the production site and DR site are of the same specifications and can automatically form a replication pair.
 
-The server at the DR site is in the Stopped state after the protected instance created. These automatically created resources, including the DR site servers and disks, cannot be used before a planned failover or failover.
+The server at the DR site is in the Stopped state after the protected instance created. These automatically created resources, including the DR site servers and disks, cannot be used before a switchover or failover.
 
 
 .. figure:: /_static/images/en-us_image_0288665321.png

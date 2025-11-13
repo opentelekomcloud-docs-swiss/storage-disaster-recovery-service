@@ -6,7 +6,7 @@ Service Overview
 ================
 
 -  :ref:`What Is SDRS? <en-us_topic_0125068221>`
--  :ref:`Product Advantages <en-us_topic_0108180804>`
+-  :ref:`SDRS Advantages <en-us_topic_0108180804>`
 -  :ref:`Application Scenarios <sdrs_pro_0003>`
 -  :ref:`Constraints <en-us_topic_0110981899>`
 -  :ref:`Supported DR Scenarios <sdrs_pro_0008>`
@@ -18,7 +18,7 @@ Service Overview
    :hidden: 
 
    what_is_sdrs
-   product_advantages
+   sdrs_advantages
    application_scenarios
    constraints
    supported_dr_scenarios
