@@ -5,12 +5,12 @@
 Basic Concepts
 ==============
 
--  :ref:`SDRS Basic Concepts <sdrs_pro_0013>`
+-  :ref:`SDRS Concepts <sdrs_pro_0013>`
 -  :ref:`Region and AZ <sdrs_pro_0014>`
 
 .. toctree::
    :maxdepth: 1
    :hidden: 
 
-   sdrs_basic_concepts
+   sdrs_concepts
    region_and_az

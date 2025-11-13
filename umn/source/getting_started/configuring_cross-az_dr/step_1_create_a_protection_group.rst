@@ -13,7 +13,7 @@ You can specify two AZs as the source and target AZs, and create a protection gr
 Verify the servers at the production and DR sites before you create a protection group. In this version, only the VPC migration deployment model is supported. Specifically, the servers at the production and DR sites must be in different AZs but in the same VPC.
 
 
-.. figure:: /_static/images/en-us_image_0288665357.png
+.. figure:: /_static/images/en-us_image_0000002148848834.png
    :alt: **Figure 1** Creating a protection group
 
    **Figure 1** Creating a protection group

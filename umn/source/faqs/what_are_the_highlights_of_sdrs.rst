@@ -9,7 +9,7 @@ SDRS provides the following features:
 
 -  Convenient service recovery
 
-   SDRS provides a management console. You can configure and manage server replication and perform a planned failover or failover.
+   SDRS provides a management console. You can configure and manage server replication and perform a switchover or failover.
 
 -  Server replication
 
@@ -25,7 +25,7 @@ SDRS provides the following features:
 
 -  High RTO and RPO standard
 
-   For SDRS, recovery time objective (RTO) refers to the period from the time when users perform a planned failover or failover at the production site to the time when the servers at the DR site start to run. This period does not include the time spent on DNS configuration, security group configuration, or customer script execution, and is shorter than 30 minutes.
+   For SDRS, recovery time objective (RTO) refers to the period from when users perform a switchover or failover at the production site to the time when the servers at the DR site start to run. This period does not include the time spent on DNS configuration, security group configuration, or customer script execution, and is shorter than 30 minutes.
 
    SDRS provides continuous and synchronous replication for servers to ensure zero recovery point objective (RPO).
 
@@ -39,7 +39,7 @@ SDRS provides the following features:
 
 -  Flexible failover
 
-   You can perform a planned failover for an expected service interruption to prevent data loss, or perform a failover for unexpected failures to restore services quickly.
+   You can perform switchovers for expected interruptions with zero data loss, or failovers for unexpected failures to recover services quickly.
 
 -  Efficient network switchover
 

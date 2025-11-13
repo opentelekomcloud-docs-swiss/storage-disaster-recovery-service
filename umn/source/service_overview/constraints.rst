@@ -54,19 +54,22 @@ Before using SDRS, learn about the constraints listed in :ref:`Table 1 <en-us_to
 
    If the AZ of the production site becomes faulty, you can use the DR drill function to restore the server services in the AZ.
 
-Restrictions on Logging In to a Server After You Perform a Planned Failover, Failover, or DR Drill for the First Time
----------------------------------------------------------------------------------------------------------------------
+Constraints on Logging In to the Server After a Switchover, Failover, or DR Drill Is Executed First Time Ever
+-------------------------------------------------------------------------------------------------------------
 
--  For servers with Cloud-Init/Cloudbase-Init installed, after you perform a planned failover, failover, or DR drill for the first time, Cloud-Init/Cloudbase-Init will start when the servers start for the first time to inject the initial data. The password or key pair for logging in to the production site server, DR site server, or DR drill server will change.
--  For servers without Cloud-Init/Cloudbase-Init installed, the password or key pair for logging in to the production site, DR site server, or DR drill server will not change after you perform a planned failover or failover for the first time.
+-  After you have performed a switchover, failover, or DR drill for the first time:
 
-The following describes an example of server login restrictions after you perform a planned failover or failover for the first time. For details about the login restrictions for the DR drill server, see the login restrictions for the DR site server in this scenario.
+   If your servers are installed with Cloud-Init/Cloudbase-Init, Cloud-Init/Cloudbase-Init will start along with the server's first startup to inject the initial data. In this case, the password or key pair used to log in to the production site server, DR site server, or drill server will change.
 
-Server A and server B are deployed. After the first time planned failover or failover, the production site server and DR site server are listed in :ref:`Table 2 <en-us_topic_0110981899__table92017496206>`.
+-  If your servers are not installed with Cloud-Init/Cloudbase-Init, the password or key pair used to log in to the production site server, DR site server, or drill server will not change.
+
+The following uses a switchover or failover as the example operation. For the login constraints on drill servers, see those for DR site servers.
+
+In the following example, Server A and server B are deployed. :ref:`Table 2 <en-us_topic_0110981899__table92017496206>` shows the servers before and after the operation.
 
 .. _en-us_topic_0110981899__table92017496206:
 
-.. table:: **Table 2** Production site and DR site servers after a planned failover or failover
+.. table:: **Table 2** Servers before and after a switchover or failover
 
    ====== ====================== ==============
    N/A    Production Site Server DR Site Server
@@ -75,52 +78,52 @@ Server A and server B are deployed. After the first time planned failover or fai
    After  B                      A
    ====== ====================== ==============
 
-In this case, the detailed login restrictions are as follows:
+Detailed login constraints are described as follows:
 
-Scenario 1: Server A runs Windows and does not have Cloudbase-Init installed. After the first time planned failover or failover:
+**Scenario 1**: Server A runs Windows and does not have Cloudbase-Init installed. After the first time switchover or failover:
 
--  If you choose to use a password for the server login, use the password of server A to log in to the production site server B or DR site server A.
--  If you choose to use a key pair for the server login, use the password obtained from server A to log in to the production site server B or DR site server A.
-
-.. note::
-
-   From the second time planned failover or failover, the login password or key pair of the server without Cloudbase-Init installed will remain the same. Take servers listed in :ref:`Table 2 <en-us_topic_0110981899__table92017496206>` as an example.
-
-   You can use the password of server A to log in to the production site server or DR site server.
-
-Scenario 2: Server A runs Windows and already has Cloudbase-Init installed. After the first time planned failover or failover:
-
--  If you choose to use a password for the server login, check whether Cloudbase-Init is started.
-
-   If Cloudbase-Init is not started (normally within three to five minutes after the production site server starts), you can use the password of server B for the login.
-
-   After the Cloudbase-Init is started, the login password of server B set before the planned failover or failover becomes invalid. You need to reset the login password of server B and then use the new password to log in to server B.
-
--  If you choose to use a key pair for the server login, check whether Cloudbase-Init is started.
-
-   If Cloudbase-Init is not started (normally within three to five minutes after the production site server starts), you can use the password of server B for the login.
-
-   After the Cloudbase-Init is started, the login password of server B obtained before the planned failover or failover becomes invalid. You need to obtain the login password of server B again.
+-  If your servers use password for login, you can use the password of Server A to log in to the production site server (Server B) or DR site server (Server A).
+-  If your servers use key pair for login, you can use the obtained password of Server A to log in to the production site server (Server B) or DR site server (Server A).
 
 .. note::
 
-   From the second time planned failover or failover, the login password or key pair of the server with Cloudbase-Init installed will remain the same. Take servers listed in :ref:`Table 2 <en-us_topic_0110981899__table92017496206>` as an example.
+   After the first time switchover or failover, the password or key pair remains the same for the subsequent switchovers or failovers. Take servers listed in :ref:`Table 2 <en-us_topic_0110981899__table92017496206>` as an example.
 
-   -  Login using a password: Reset the password of server B and use the new password to log in to server B after the first time planned failover or failover.
-   -  Login using a key pair: Obtain the password of server B and use the obtained password to log in to server B after the first time planned failover or failover.
+   You can use the password of Server A to log in to the production site server or DR site server.
 
-Scenario 3: Server A runs Linux. After the first time planned failover or failover:
+**Scenario 2**: Server A runs Windows and already has Cloudbase-Init installed. After the first time switchover or failover:
 
--  If you choose to use a password for the server login, use the password of server A to log in to the production site server B or DR site server A.
+-  When your servers use password for login,
 
-   If the login password of server A is not changed before the planned failover or failover, use the login password configured when server A is created after the planned failover or failover.
+   If Cloudbase-Init is not started (normally within 3 to 5 minutes after the production site server starts), you can use the password of Server B for login.
 
-   If the login password of server A is changed before the planned failover or failover, use the new login password after the planned failover or failover.
+   After Cloudbase-Init is started, the login password of Server B becomes invalid. Reset the password and use the new password for login.
+
+-  When your servers use key pair for login,
+
+   If Cloudbase-Init is not started (normally within 3 to 5 minutes after the production site server starts), you can use the obtained login password of Server B for login.
+
+   After Cloudbase-Init is started, the obtained login password of Server B becomes invalid. Obtain the password again.
+
+.. note::
+
+   After the first time switchover or failover, the password or key pair remains the same for the subsequent switchovers or failovers. Take servers listed in :ref:`Table 2 <en-us_topic_0110981899__table92017496206>` as an example.
+
+   -  Login using a password: Reset the password of Server B and use the new password for login.
+   -  Login using a key pair: Obtain the password of Server B again and use the obtained password to log in to Server B.
+
+**Scenario 3**: Server A runs Linux. After the first time switchover or failover:
+
+-  If your servers use password for login, you can use the password of Server A to log in to the production site server (Server B) or disaster recovery site server (Server A). Specifically:
+
+   If the login password of Server A is not changed before the operation, use this password for login.
+
+   If the login password of server A has been changed before the operation, use the new password for login.
 
    .. note::
 
-      For ECSs running OSs other than CoreOS, the login password does not change after the first-time planned failover or failover.
+      For ECS OSs other than CoreOS, the login password does not change after the first time switchover or failover.
 
-      For ECSs running CoreOS, the login password of server A will restore to the initial one after the first-time planned failover or failover. Therefore, you need to use the login password configured when server A is created to log in to production site server A or DR site server B.
+      For ECSs running CoreOS, the login password of Server A will restore to the initial one after the first time switchover or failover. In this case, use the login password configured when Server A is created to log in to production site Server A or DR site Server B.
 
--  If you choose to use a key pair for the server login, use the key pair of server A to log in to the production site server B or DR site server A in SSH mode.
+-  If your server uses key pair for login, use the SSH key pair of Server A to log in to production site Server B or DR site Server A.
