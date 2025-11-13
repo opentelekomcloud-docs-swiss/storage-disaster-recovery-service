@@ -30,14 +30,14 @@ Notes
 
 For Linux servers with Cloud-Init installed, if you have changed **hostname** of the production site server before you perform a failover for the first time, this modification will not synchronize to the DR site server.
 
-To resolve this problem, see :ref:`What Can I Do If hostname of the Production Site Server and DR Site Server Are Different After a Planned Failover or Failover? <sdrs_06_0404>`
+To resolve this problem, see :ref:`What Can I Do If hostname of the Production Site Server and DR Site Server Are Different After a Switchover or Failover? <sdrs_06_0404>`
 
 Prerequisites
 -------------
 
 -  You have confirmed with the administrator that the servers and disks at the production site are faulty, and the deployed services are unavailable.
 -  The protection group has replication pairs.
--  Protection is enabled for the protection group, and the protection group is in the **Protecting**, **Planned failover failed**, or **Failover failed** state.
+-  Protection is enabled for the protection group, and the protection group is in the **Protecting**, **Switchover failed**, or **Failover failed** state.
 
 Procedure
 ---------
@@ -67,6 +67,6 @@ Procedure
 Related Operations
 ------------------
 
--  After the failover is complete, the status of the protection group changes to **Failover complete**. Then, you need to switch to the protected instance details page and start the DR site server.
+-  After the failover is complete, the status of the protection group changes to **Failover complete**. Then, you need to switch to the protected instance details page and manually start the DR site server.
 -  After the failover is complete, the protection group is in the **Protection disabled** state. You need to enable protection again to start data synchronization. For details, see :ref:`Performing Reprotection <sdrs_ug_pg_0006>`.
 -  After the failover is complete, the NIC and IP address information of the servers at the DR site (original production site) will not be displayed. For details, see :ref:`Why NICs of DR Site Servers Are Not Displayed After I Perform a Failover? <sdrs_faq_0004>`

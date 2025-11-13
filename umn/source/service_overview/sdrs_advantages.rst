@@ -2,14 +2,14 @@
 
 .. _en-us_topic_0108180804:
 
-Product Advantages
-==================
+SDRS Advantages
+===============
 
 SDRS has the following advantages:
 
 -  Convenient service recovery
 
-   SDRS provides a management console. You can configure and manage server replication and perform a planned failover or failover.
+   SDRS provides a management console. You can configure and manage server replication and perform switchovers or failovers.
 
 -  server replication
 
@@ -21,7 +21,7 @@ SDRS has the following advantages:
 
 -  Zero impact on applications
 
-   Applications running on servers can be replicated, and the replication will not have any impact on the applications.
+   You can replicate all applications on the servers. The replication has no impact on the applications.
 
 -  RPO target
 
@@ -33,16 +33,16 @@ SDRS has the following advantages:
 
 -  Seamless DR drills
 
-   You can easily perform DR drills without affecting ongoing replication.
+   You can run disaster recovery drills without affecting ongoing replication.
 
 -  Flexible failover
 
-   You can perform a planned failover for an expected service interruption to prevent data loss, or perform a failover for unexpected failures to restore services quickly.
+   You can perform switchovers for expected interruptions with zero data loss, or failovers for unexpected failures to recover services quickly.
 
 -  Efficient network switchover
 
-   SDRS simplifies program resource management during failovers, including reserving IP addresses and MAC addresses, all of which facilitates efficient network switchovers.
+   Streamline resource management during switchovers or failovers, for example, to reserve IP addresses and MAC addresses.
 
--  Excellent performance for the price
+-  Cost-effective
 
-   When services are running properly, servers at the DR site are stopped and thereby will not be billed. This greatly reduces the DR TCO.
+   When production site services are running properly, servers at the DR site are stopped. This greatly reduces the disaster recovery TCO.

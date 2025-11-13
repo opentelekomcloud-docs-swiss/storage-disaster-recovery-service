@@ -12,11 +12,11 @@ If a replication pair is no longer used, you can release the associated virtual 
 
 When you delete a replication pair, the production site disk in the replication pair will not be deleted. You can decide whether to delete the DR site disk.
 
-**Prerequisites**
------------------
+Prerequisites
+-------------
 
--  The protection group is in the **Available**, **Protecting**, **Failover complete**, **Enabling protection failed**, **Disabling protection failed**, **Planned failover failed**, **Failover failed**, Deletion failed, or **Re-enabling protection failed** state.
--  The replication pair is in the **Available**, **Protecting**, **Failover complete**, **Creation failed**, **Enabling protection failed**, **Disabling protection failed**, **Planned failover failed**, **Failover failed**, **Deletion failed**, **Re-enabling protection failed**, **Attaching failed**, **Expansion failed**, **Invalid**, or **Faulty** state.
+-  The protection group is in the **Available**, **Protecting**, **Failover complete**, **Enabling protection failed**, **Disabling protection failed**, **Switchover failed**, **Failover failed**, Deletion failed, or **Re-enabling protection failed** state.
+-  The replication pair is in the **Available**, **Protecting**, **Failover complete**, **Creation failed**, **Enabling protection failed**, **Disabling protection failed**, **Switchover failed**, **Failover failed**, **Deletion failed**, **Re-enabling protection failed**, **Attaching failed**, **Expansion failed**, **Invalid**, or **Faulty** state.
 -  The replication pair is not attached to any protected instance. For details about how to detach a replication pair, see :ref:`Detaching a Replication Pair <sdrs_ug_pi_0005>`.
 
 Procedure

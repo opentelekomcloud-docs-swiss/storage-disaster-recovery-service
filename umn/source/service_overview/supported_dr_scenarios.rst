@@ -29,7 +29,7 @@ DR Site Is Faulty
 
 -  Description
 
-   The DR site has a fault. Services at the production site are not affected, but the planned failover cannot be performed.
+   The DR site has a fault. Services at the production site are not affected, but a switchover cannot be performed.
 
 
    .. figure:: /_static/images/en-us_image_0288665264.png
@@ -46,7 +46,7 @@ Replication Link Is Faulty
 
 -  Description
 
-   The replication link between the production site and DR site becomes faulty. Services at the production site are not affected, but the planned failover cannot be performed.
+   The replication link between the production site and DR site becomes faulty. Services at the production site are not affected, but a switchover cannot be performed.
 
 
    .. figure:: /_static/images/en-us_image_0288665385.png
@@ -82,7 +82,7 @@ Storage Resource at the DR Site Is Faulty
 
 -  Description
 
-   The storage resource at the DR site has a fault. Services at the production site are not affected, but the planned failover or failover cannot be performed.
+   The storage resource at the DR site has a fault. Services at the production site are not affected, but a switchover or failover cannot be performed.
 
 
    .. figure:: /_static/images/en-us_image_0288665319.png
