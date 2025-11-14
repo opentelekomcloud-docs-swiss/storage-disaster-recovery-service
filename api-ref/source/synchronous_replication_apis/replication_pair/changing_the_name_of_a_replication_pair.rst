@@ -178,10 +178,10 @@ Response
       +-----------------------+-----------------------+--------------------------------------------------------------------+
       | volume_type           | String                | Specifies the type of the disk in a replication pair.              |
       |                       |                       |                                                                    |
-      |                       |                       | Currently, the value can be **SSD** and **SAS**.                   |
+      |                       |                       | The value can be as follows: **SAS**, or **SSD**.                  |
       |                       |                       |                                                                    |
-      |                       |                       | -  **SSD**: specifies the ultra-high I/O disk type.                |
-      |                       |                       | -  **SAS**: specifies the high I/O disk type.                      |
+      |                       |                       | -  **SSD**: the ultra-high I/O type                                |
+      |                       |                       | -  **SAS**: the high I/O type                                      |
       +-----------------------+-----------------------+--------------------------------------------------------------------+
 
 -  Example response

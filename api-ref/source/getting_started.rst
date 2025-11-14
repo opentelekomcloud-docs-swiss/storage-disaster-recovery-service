@@ -17,14 +17,14 @@ Involved APIs
 If you use a token for authentication, you must obtain the token and add **X-Auth-Token** to the request header of the service API when making an API call.
 
 -  IAM API used to obtain the token
--  SDRS API used to create a protection group
+-  API used to create a protection group
 
 Procedure
 ---------
 
 #. Obtain the token by performing steps provided in :ref:`Authentication <sdrs_03_0003>`.
 
-#. Send **POST https://**\ *SDRS endpoint*\ **/v1/{project_id}/server-groups**.
+#. Send **POST https://** *endpoint*\ **/v1/{project_id}/server-groups**.
 
 #. Add **X-Auth-Token** to the request header.
 
