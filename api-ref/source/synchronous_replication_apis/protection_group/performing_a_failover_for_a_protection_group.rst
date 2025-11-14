@@ -17,21 +17,21 @@ Constraints and Limitations
 -  **status** of the protection group must be **protected**, **error-failing-over**, or **error-reversing**.
 -  If the server at the production site or DR site in a protected instance is deleted using the native interface, no operations can be performed on the protected instance or the protection group of the protected instance.
 
-Constraints on Logging In to the Server After a Planned Failover, Failover, or Disaster Recovery Drill Is Executed First Time Ever
-----------------------------------------------------------------------------------------------------------------------------------
+Constraints on Logging In to the Server After a Switchover, Failover, or DR Drill Is Executed First Time Ever
+-------------------------------------------------------------------------------------------------------------
 
-After you have performed a planned failover, failover, or DR drill for the first time:
+After you have performed a switchover, failover, or DR drill for the first time:
 
 -  If your servers are installed with Cloud-Init/Cloudbase-Init, Cloud-Init/Cloudbase-Init will start along with the server's first startup to inject the initial data. In this case, the password or key pair used to log in to the production site server, disaster recovery site server, or drill server will change.
 -  If your servers are not installed with Cloud-Init/Cloudbase-Init, the password or key pair used to log in to the production site server, disaster recovery site server, or drill server will not change.
 
-The following uses a planned failover or failover as the example operation. For the login constraints on drill servers, see those for disaster recovery site servers.
+The following uses a switchover or failover as the example operation. For the login constraints on drill servers, see those for disaster recovery site servers.
 
 In the following example, Server A and server B are deployed. :ref:`Table 1 <sdrs_05_0408__en-us_topic_0110981899_table92017496206>` shows the servers before and after the operation.
 
 .. _sdrs_05_0408__en-us_topic_0110981899_table92017496206:
 
-.. table:: **Table 1** Servers before and after a planned failover or failover
+.. table:: **Table 1** Servers before and after a switchover or failover
 
    ====== ====================== =============================
    ``-``  Production Site Server Disaster Recovery Site Server
@@ -42,18 +42,18 @@ In the following example, Server A and server B are deployed. :ref:`Table 1 <sdr
 
 Detailed login constraints are described as follows:
 
-**Scenario 1**: Server A runs Windows and does not have Cloudbase-Init installed. After the first time planned failover or failover:
+**Scenario 1**: Server A runs Windows and does not have Cloudbase-Init installed. After the first time switchover or failover:
 
 -  If your servers use password for login, you can use the password of Server A to log in to the production site server (Server B) or disaster recovery site server (Server A).
 -  If your servers use key pair for login, you can use the obtained password of Server A to log in to the production site server (Server B) or disaster recovery site server (Server A).
 
 .. note::
 
-   After the first time planned failover or failover, the password or key pair remains the same for the subsequent planned failovers or failovers. In this example:
+   After the first time switchover or failover, the password or key pair remains the same for the subsequent switchovers or failovers. In this example:
 
    You can use the password of Server A to log in to the production site server or disaster recovery site server.
 
-**Scenario 2**: Server A runs Windows and already has Cloudbase-Init installed. After the first time planned failover or failover:
+**Scenario 2**: Server A runs Windows and already has Cloudbase-Init installed. After the first time switchover or failover:
 
 -  When your servers use password for login,
 
@@ -69,12 +69,12 @@ Detailed login constraints are described as follows:
 
 .. note::
 
-   After the first time planned failover or failover, the password or key pair remains the same for the subsequent planned failovers or failovers. In this example:
+   After the first time switchover or failover, the password or key pair remains the same for the subsequent switchovers or failovers. In this example:
 
    -  Login using a password: Reset the password of Server B and use the new password for login.
    -  Login using a key pair: Obtain the password of Server B again and use the obtained password to log in to Server B.
 
-**Scenario 3**: Server A runs Linux. After the first time planned failover or failover:
+**Scenario 3**: Server A runs Linux. After the first time switchover or failover:
 
 -  If your servers use password for login, you can use the password of Server A to log in to the production site server (Server B) or disaster recovery site server (Server A). Specifically:
 
@@ -84,9 +84,9 @@ Detailed login constraints are described as follows:
 
    .. note::
 
-      For ECS OSs other than CoreOS, the login password does not change after the first time planned failover or failover.
+      For ECS OSs other than CoreOS, the login password does not change after the first time switchover or failover.
 
-      For ECSs running CoreOS, the login password of Server A will restore to the initial one after the first time planned failover or failover. In this case, use the login password configured when Server A is created to log in to production site Server A or disaster recovery site Server B.
+      For ECSs running CoreOS, the login password of Server A will restore to the initial one after the first time switchover or failover. In this case, use the login password configured when Server A is created to log in to production site Server A or disaster recovery site Server B.
 
 -  If your server uses key pair for login, use the SSH key pair of Server A to log in to production site Server B or disaster recovery site Server A.
 
