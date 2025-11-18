@@ -15,7 +15,7 @@ Constraints and Limitations
 
 -  **status** of the protection group must be **available** or **protected**.
 -  No shared disk has been attached to the server.
--  No protected instance has been created using the server.
+-  One server can be used to create only one protected instance.
 -  The server must be in the same VPC as the protection group.
 -  If protection is enabled for servers created during capacity expansion of an Auto Scaling (AS) group, these servers cannot be deleted when the capacity of the AS group is reduced.
 -  If the server at the production site runs Windows and you choose the key login mode, ensure that the key pair of the server exists when you create a protected instance. Otherwise, the server at the DR site may fail to create, causing the protected instance creation failure.
