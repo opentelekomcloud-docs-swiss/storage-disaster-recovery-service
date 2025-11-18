@@ -9,6 +9,6 @@ Storage Disaster Recovery Service - API Reference
    api_overview
    calling_apis/index
    getting_started
-   sdrs_apis/index
+   synchronous_replication_apis/index
    appendixes/index
    change_history
