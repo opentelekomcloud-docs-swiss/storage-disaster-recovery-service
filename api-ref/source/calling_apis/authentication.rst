@@ -12,7 +12,8 @@ Token Authentication
 
 .. note::
 
-   The validity period of a token is 24 hours. When using a token for authentication, cache it to prevent frequently calling the IAM API used to obtain a user token.
+   -  A token remains valid for 24 hours after it is generated. You can cache a token and reuse it for authentication instead of generating a new one each time.
+   -  Before using a token, ensure that it has sufficient time remaining before expiration. Using a near-expiry token may cause API call failures.
 
 A token specifies temporary permissions in a computer system. During API authentication using a token, the token is added to requests to get permissions for calling the API. You can obtain a token by calling the `Obtaining a User Token <https://docs.sc.otc.t-systems.com/api/iam/en-us_topic_0057845583.html>`__ API.
 
@@ -29,7 +30,7 @@ IMS is a project-level service. When you call the API, set **auth.scope** in the
                "password": {
                    "user": {
                        "name": "username",   // IAM user name
-                       "password": $ADMIN_PASS,  //IAM user password. You are advised to store it in ciphertext in the configuration file or an environment variable and decrypt it when needed to ensure security.
+                       "password": $ADMIN_PASS,  // IAM user password. You are advised to store it in ciphertext in the configuration file or an environment variable and decrypt it when needed to ensure security.
                        "domain": {
                            "name": "domainname"  // Name of the domain that the IAM user belongs to
                        }

@@ -49,7 +49,7 @@ Concepts
 
 -  AZ
 
-   An AZ comprises of one or more physical data centers equipped with independent ventilation, fire, water, and electricity facilities. Computing, network, storage, and other resources in an AZ are logically divided into multiple clusters. AZs within a region are interconnected using high-speed optical fibers to allow you to build cross-AZ high-availability systems.
+   An AZ contains one or more physical data centers with independent power, cooling, fire suppression, and water systems. Within an AZ, compute, network, storage, and other resources are logically divided into multiple clusters. AZs within a region are interconnected using high-speed optical fibers to allow you to build cross-AZ high-availability systems.
 
 -  Project
 
@@ -60,19 +60,3 @@ Concepts
       :alt: **Figure 1** Project isolation model
 
       **Figure 1** Project isolation model
-
--  :ref:`Overview <sdrs_01_0000>`
--  :ref:`API Calling <sdrs_01_0002>`
--  :ref:`Endpoints <sdrs_01_0003>`
--  :ref:`Constraints <sdrs_01_0004>`
--  :ref:`Concepts <sdrs_01_0005>`
-
-.. toctree::
-   :maxdepth: 1
-   :hidden: 
-
-   overview
-   api_calling
-   endpoints
-   constraints
-   concepts
